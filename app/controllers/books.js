@@ -14,8 +14,7 @@ function getBooksById(req, res, next){
 
     Book.findById({_id: bookId}, function(err, result){
         if(err){
-            console.log('err', err)
-            return res.status(404).json(err)
+            return next(err)
         }
         req.resources.books = result;
         return next();

@@ -6,20 +6,17 @@ const bookCtrl = require('../controllers/books');
 const helperCtrl = require('../helpers');
 
 router.get('/books',
-
-bookCtrl.getBooks,
+    bookCtrl.getBooks,
     helperCtrl.response_to_json('books')
 )
 
 router.get('/books/:bookId',
-
     bookCtrl.getBooksById,
     helperCtrl.response_to_json('books')
 
 )
 
 router.post('/books',
-
     bookCtrl.createBook,
     helperCtrl.response_to_json('books')
 
