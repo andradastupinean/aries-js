@@ -5,6 +5,8 @@ const express = require('express')
 const router = express.Router()
 const userCtrl = require('../controllers/users');
 const helperCtrl = require('../helpers');
+//const isAdmin = true;
+
 
 router.get('/users',
 

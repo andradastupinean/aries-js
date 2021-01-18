@@ -1,3 +1,7 @@
 node_modules
+<<<<<<< HEAD
+=======
+./idea
+>>>>>>> d7c12e6acd2f281231972c26844ee0d88e5856ea
 config/environment/development.js
 config/environment/production.js
