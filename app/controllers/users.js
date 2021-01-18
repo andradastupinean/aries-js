@@ -17,9 +17,7 @@ function getUsersById(req, res, next){
 
     User.findById({_id: userId}, function(err, result){
         if(err){
-            console.log('err', err)
-            return res.status(404).json(err)
-
+            return next(err)
         }
         req.resources.users = result;
         return next();
@@ -71,7 +69,6 @@ function mid2(req, res, next){
 
 function mid3(req, res, next){
     console.log('users', req.query);
-    return res.json({text:'Hello GET'});
-
+    next();
 }
 
